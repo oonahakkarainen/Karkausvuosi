@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title></title>
+<style>
+label
+{
+	display: block;
+	width: 125px;
+	float: left;
+}
+body {
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+	padding: 10px;
+    width: 300px;
+}
+</style>
+</head>
+<body>
+<div border:">
+<label>Anna vuosi:</label> 
+<input type="number" min="1" id="vuosi" style="width:80px">
+<img src="kysy.jpg" onclick="tutki()">
+<br>
+<span id="tulos"></span>
+<script>
+	function tutki (){
+		let vuosi = document.getElementById("vuosi").value;
+		if (vuosi % 4 == 0 && vuosi % 100 != 0 || vuosi % 400 == 0){
+			tulos="Vuosi " + vuosi + " on karkausvuosi."
+		}else{
+			tulos="Vuosi " + vuosi + " ei ole karkausvuosi."
+		}
+		document.getElementById("tulos").innerHTML=tulos;
+		}
+
+</script>
+</body>
+</html>
+
+
